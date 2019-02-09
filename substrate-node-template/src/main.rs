@@ -39,7 +39,6 @@ fn run() -> cli::error::Result<()> {
 		executable_name: "template-node",
 		author: "Anonymous",
 		description: "Template Node",
-		support_url: "https://github.com/paritytech/substrate/issues/new",
 	};
 	cli::run(::std::env::args(), cli::Exit, version)
 }

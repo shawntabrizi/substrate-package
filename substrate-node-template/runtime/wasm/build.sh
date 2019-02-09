@@ -6,7 +6,7 @@ if cargo --version | grep -q "nightly"; then
 else
 	CARGO_CMD="cargo +nightly"
 fi
-$CARGO_CMD build --target=wasm32-unknown-unknown --release --no-default-features
+$CARGO_CMD build --target=wasm32-unknown-unknown --release
 for i in template_node_runtime
 do
 	wasm-gc target/wasm32-unknown-unknown/release/$i.wasm target/wasm32-unknown-unknown/release/$i.compact.wasm
