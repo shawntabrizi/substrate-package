@@ -1,5 +1,5 @@
 [[bin]]
-name = 'substrate-node-template'
+name = 'template-node'
 path = 'src/main.rs'
 
 [dependencies]

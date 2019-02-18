@@ -51,6 +51,11 @@ function replace {
 	rm -f $TEMP
 }
 
-replace substrate-node-template "${lname//[_ ]/-}"
-replace substrate_node_template "${lname//[- ]/_}"
-replace YOUR_NAME "$author"
+replace "Template Node" "${name}"
+replace template-node "${lname//[_ ]/-}"
+replace template_node "${lname//[- ]/_}"
+replace Anonymous "$author"
+
+echo "Rename Complete"
+
+popd >/dev/null
