@@ -6,7 +6,7 @@ A stable, known working version of the [Substrate Node Template](https://github.
 
  * Run `./get-substrate-dependencies.sh`
     * This installs some external dependencies, take a look at the script
-    * Windows users need to follow [instructions here])(https://github.com/paritytech/substrate#61-hacking-on-substrate) instead
+    * Windows users need to follow [instructions here](https://github.com/paritytech/substrate#61-hacking-on-substrate) instead
 
  * Run `./substrate-package-rename.sh <project_name> <your_name>`
     * This renames the project folders, and the binary file that gets created when you compile your runtime
