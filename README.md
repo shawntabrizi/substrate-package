@@ -28,7 +28,7 @@ A stable, known working version of the [Substrate Node Template](https://github.
 
 * Compatible with the latest documentation available for Substrate Runtime Module development.
 * The fastest way to get started building on substrate
-* Using Substrate commit: [ebe4c972bab088a760ca43e7662bf750ccf1e919](https://github.com/paritytech/substrate/commit/ebe4c972bab088a760ca43e7662bf750ccf1e919)
+* Using Substrate commit: [82744fbb6f4d677f2edfe9d88737c237622c97a4](https://github.com/paritytech/substrate/commit/82744fbb6f4d677f2edfe9d88737c237622c97a4)
 * Using Substrate UI commit: [e32e874b177effe9b789699282f11dd63b783398](https://github.com/paritytech/substrate-ui/commit/e32e874b177effe9b789699282f11dd63b783398)
 
 # How was it made?
