@@ -4,8 +4,9 @@ A stable, known working version of the [Substrate Node Template](https://github.
 
 # How to use it:
 
- * Run `./get-substrate-dependencies.sh`
-    * This installs some external dependencies, take a look at the script
+ * Run `curl https://getsubstrate.io -sSf | bash -s -- --fast`
+    * This installs external dependencies needed for substrate. [Take a look at the script](https://getsubstrate.io).
+    * The `--fast` command allows us to skip the `cargo install` steps for `substrate` and `subkey`, which is not needed for runtime development.
     * Windows users need to follow [instructions here](https://github.com/paritytech/substrate#61-hacking-on-substrate) instead
 
  * Run `./substrate-package-rename.sh <project_name> <your_name>`
