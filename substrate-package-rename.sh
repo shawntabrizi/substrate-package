@@ -34,7 +34,7 @@ git mv substrate-ui "$dirname-ui"
 
 pushd $dirname >/dev/null
 
-echo "${bold}Customising project...${normal}"
+echo "${bold}Customizing project...${normal}"
 function replace {
 	find_this="$1"
 	shift
@@ -43,7 +43,7 @@ function replace {
 	IFS=$'\n'
 	TEMP=$(mktemp -d "${TMPDIR:-/tmp}/.XXXXXXXXXXXX")
 	rmdir $TEMP
-	for item in `find . -type f`
+	for item in `find . -not -path '*/\.*' -type f`
 	do
 		sed "s/$find_this/$replace_with/g" "$item" > $TEMP
 		cat $TEMP > "$item"
