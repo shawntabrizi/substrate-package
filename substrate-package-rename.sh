@@ -29,8 +29,8 @@ fi
 
 echo "${bold}Moving project folder...${normal}"
 
-mv substrate-node-template $dirname
-mv substrate-ui "$dirname-ui"
+git mv substrate-node-template $dirname
+git mv substrate-ui "$dirname-ui"
 
 pushd $dirname >/dev/null
 
