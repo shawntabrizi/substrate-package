@@ -48,6 +48,8 @@ export class App extends ReactiveComponent {
 			<PokeSegment />
 			<Divider hidden />
 			<TransactionsSegment />
+			<Divider hidden />
+			<DemoSegment />
 		</div>);
 	}
 }
@@ -303,14 +305,14 @@ class UpgradeSegment extends React.Component {
 }
 
 class PokeSegment extends React.Component {
-	constructor () {
+	constructor() {
 		super()
 		this.storageKey = new Bond;
 		this.storageValue = new Bond;
 	}
-	render () {
+	render() {
 		return <If condition={runtime.metadata.map(m => m.modules && m.modules.some(o => o.name === 'sudo'))} then={
-			<Segment style={{margin: '1em'}} padded>
+			<Segment style={{ margin: '1em' }} padded>
 				<Header as='h2'>
 					<Icon name='search' />
 					<Header.Content>
@@ -318,7 +320,7 @@ class PokeSegment extends React.Component {
 						<Header.Subheader>Set a particular key of storage to a particular value</Header.Subheader>
 					</Header.Content>
 				</Header>
-				<div style={{paddingBottom: '1em'}}></div>
+				<div style={{ paddingBottom: '1em' }}></div>
 				<InputBond bond={this.storageKey} placeholder='Storage key e.g. 0xf00baa' />
 				<InputBond bond={this.storageValue} placeholder='Storage value e.g. 0xf00baa' />
 				<TransactButton
@@ -330,19 +332,19 @@ class PokeSegment extends React.Component {
 					}}
 				/>
 			</Segment>
-		}/>		
+		} />
 	}
 }
 
 class TransactionsSegment extends React.Component {
-	constructor () {
+	constructor() {
 		super()
 
 		this.txhex = new Bond
 	}
 
-	render () {
-		return <Segment style={{margin: '1em'}} padded>
+	render() {
+		return <Segment style={{ margin: '1em' }} padded>
 			<Header as='h2'>
 				<Icon name='certificate' />
 				<Header.Content>
@@ -350,13 +352,57 @@ class TransactionsSegment extends React.Component {
 					<Header.Subheader>Send custom transactions</Header.Subheader>
 				</Header.Content>
 			</Header>
-			<div style={{paddingBottom: '1em'}}>
-				<div style={{paddingBottom: '1em'}}>
-					<div style={{fontSize: 'small'}}>Custom Transaction Data</div>
-					<InputBond bond={this.txhex}/>
+			<div style={{ paddingBottom: '1em' }}>
+				<div style={{ paddingBottom: '1em' }}>
+					<div style={{ fontSize: 'small' }}>Custom Transaction Data</div>
+					<InputBond bond={this.txhex} />
 				</div>
 				<TransactButton tx={this.txhex.map(hexToBytes)} content="Publish" icon="sign in" />
 			</div>
+		</Segment>
+	}
+}
+
+class DemoSegment extends React.Component {
+	constructor() {
+		super()
+
+		this.player = new Bond
+	}
+
+	render() {
+		return <Segment style={{ margin: '1em' }} padded>
+			<Header as='h2'>
+				<Icon name='game' />
+				<Header.Content>
+					Play the game
+			<Header.Subheader>Play the game here!</Header.Subheader>
+				</Header.Content>
+			</Header>
+			<div style={{ paddingBottom: '1em' }}>
+				<div style={{ fontSize: 'small' }}>player</div>
+				<SignerBond bond={this.player} />
+				<If condition={this.player.ready()} then={<span>
+					<Label>Balance
+			  <Label.Detail>
+							<Pretty value={runtime.balances.balance(this.player)} />
+						</Label.Detail>
+					</Label>
+				</span>} />
+			</div>
+			<TransactButton
+				content="Play"
+				icon='game'
+				tx={{
+					sender: this.player,
+					call: calls.demo.play()
+				}}
+			/>
+			<Label>Pot Balance
+		  <Label.Detail>
+					<Pretty value={runtime.demo.pot} />
+				</Label.Detail>
+			</Label>
 		</Segment>
 	}
 }
