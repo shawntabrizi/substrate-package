@@ -48,7 +48,7 @@ decl_module! {
 			let mut pot = Self::pot();
 
 			// Try to withdraw the payment from the account, making sure that it will not kill the account
-			<balances::Module<T> as Currency<_>>::withdraw(&sender, payment, WithdrawReason::Reserve, ExistenceRequirement::KeepAlive)?;
+			let _ = <balances::Module<T> as Currency<_>>::withdraw(&sender, payment, WithdrawReason::Reserve, ExistenceRequirement::KeepAlive)?;
 
 			// Generate a random hash between 0-255 using a csRNG algorithm
 			if (<system::Module<T>>::random_seed(), &sender, nonce)
@@ -56,7 +56,7 @@ decl_module! {
 				.using_encoded(|e| e[0] < 128)
 			{
 				// If the user won the coin flip, deposit the pot winnings; cannot fail
-				<balances::Module<T> as Currency<_>>::deposit_into_existing(&sender, pot)
+				let _ = <balances::Module<T> as Currency<_>>::deposit_into_existing(&sender, pot)
 				.expect("`sender` must exist since a transaction is being made and withdraw will keep alive; qed.");
 				// Reduce the pot to zero
 				pot = Zero::zero();
