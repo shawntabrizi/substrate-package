@@ -29,14 +29,14 @@ A stable, known working version of the [Substrate Node Template](https://github.
 
 * Compatible with the latest documentation available for Substrate Runtime Module development.
 * The fastest way to get started building on substrate
-* Using Substrate commit: [82744fbb6f4d677f2edfe9d88737c237622c97a4](https://github.com/paritytech/substrate/commit/82744fbb6f4d677f2edfe9d88737c237622c97a4)
-* Using Substrate UI commit: [e32e874b177effe9b789699282f11dd63b783398](https://github.com/paritytech/substrate-ui/commit/e32e874b177effe9b789699282f11dd63b783398)
+* Using Substrate commit: [89bbb7b6d0e076f0eda736b330f5f792aa2e2991](https://github.com/paritytech/substrate/commit/89bbb7b6d0e076f0eda736b330f5f792aa2e2991) (`v1.0` branch)
+* Using Substrate UI commit: [bb006ea0a06160aa7e5fb0a76fa37590f5f2850a](https://github.com/paritytech/substrate-ui/commit/bb006ea0a06160aa7e5fb0a76fa37590f5f2850a) (`substrate-node-template` branch)
 
 # How was it made?
 
-`substrate-node-template` was created by running `substrate-node-new` and resetting some of the "naming" values to default.
+`substrate-node-template` was created by running [`substrate-node-new`](https://github.com/paritytech/substrate-up/blob/master/substrate-node-new).
 
-`substrate-ui` was created by running `substrate-ui-new`.
+`substrate-ui` was created by running [`substrate-ui-new`](https://github.com/paritytech/substrate-up/blob/master/substrate-ui-new).
 
 # What it tested to work?
 
