@@ -52,8 +52,8 @@ function replace {
 }
 
 replace "Template Node" "${name}"
-replace template-node "${lname//[_ ]/-}"
-replace template_node "${lname//[- ]/_}"
+replace node-template "${lname//[_ ]/-}"
+replace node_template "${lname//[- ]/_}"
 replace Anonymous "$author"
 
 echo "Rename Complete"
