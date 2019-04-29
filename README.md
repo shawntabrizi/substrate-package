@@ -8,7 +8,11 @@ A stable, known working version of the [Substrate Node Template](https://github.
     * This installs external dependencies needed for substrate. [Take a look at the script](https://getsubstrate.io).
     * The `--fast` command allows us to skip the `cargo install` steps for `substrate` and `subkey`, which is not needed for runtime development.
     * Windows users need to follow [instructions here](https://github.com/paritytech/substrate#61-hacking-on-substrate) instead
-
+ * You will also need to install rustup and the stable, nightly and wasm toolchain if you haven't already done so:
+    * `rustup update nightly`
+    * `rustup target add wasm32-unknown-unknown --toolchain nightly`
+    * `rustup update stable`
+    * `cargo install --git https://github.com/alexcrichton/wasm-gc`
  * Run `./substrate-package-rename.sh <project_name> <your_name>`
     * This renames the project folders, and the binary file that gets created when you compile your runtime
 
