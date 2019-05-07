@@ -38,7 +38,7 @@ A stable, known working version of the [Substrate Node Template](https://github.
 
 `substrate-ui` was created by running [`substrate-ui-new`](https://github.com/paritytech/substrate-up/blob/master/substrate-ui-new).
 
-# What it tested to work?
+# What is tested to work?
 
 * `substrate-node-template` is fully compatible with `substrate-ui` included with this package:
     * Balance Transfer
