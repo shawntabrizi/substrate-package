@@ -43,7 +43,7 @@ function replace {
 	IFS=$'\n'
 	TEMP=$(mktemp -d "${TMPDIR:-/tmp}/.XXXXXXXXXXXX")
 	rmdir $TEMP
-	for item in `find . -not -path '*/\.*' -type f \( -name "*.rs" -o -name "*.md" \)`
+	for item in `find . -not -path '*/\.*' -type f \( -name "*.rs" -o -name "*.md" -o -name "*.toml" -o -name "*.lock" \)`
 	do
 		sed "s/$find_this/$replace_with/g" "$item" > $TEMP
 		cat $TEMP > "$item"
