@@ -1,6 +1,6 @@
 # Substrate Package
 
-A stable, known working version of the [Substrate Node Template](https://github.com/paritytech/substrate/tree/master/node-template) and [Substrate UI](https://github.com/paritytech/substrate-ui).
+A stable, known working version of the [Substrate Node Template](https://github.com/paritytech/substrate/tree/master/node-template), [Substrate Module Template](https://github.com/shawntabrizi/substrate-module-template), and [Substrate UI](https://github.com/paritytech/substrate-ui).
 
 # How to use it:
 
@@ -31,12 +31,23 @@ A stable, known working version of the [Substrate Node Template](https://github.
 
 * Compatible with the latest documentation available for Substrate Runtime Module development.
 * The fastest way to get started building on substrate
-* Using Substrate commit: [f2f2994822f4331291597e341798fb6271bb6ef4](https://github.com/paritytech/substrate/commit/f2f2994822f4331291597e341798fb6271bb6ef4) (`v1.0` branch)
+* Using Substrate commit: [047e887d1191aa0b85f46570a432c5665bfc1b02](https://github.com/paritytech/substrate/commit/047e887d1191aa0b85f46570a432c5665bfc1b02) (`v1.0` branch)
 * Using Substrate UI commit: [db7bf60ee81cfd1551c8b9a4ad67f0b1d8d331bc](https://github.com/paritytech/substrate-ui/commit/db7bf60ee81cfd1551c8b9a4ad67f0b1d8d331bc) (`substrate-node-template` branch)
+
+# What is the Substrate Module Template?
+
+The `substrate-module-template` is a template where you can start building your own runtime module as it's own independent crate. This is great if you want to allow others to include your runtime module into their Substrate node. Instructions for using the `substrate-module-template` are included with the project.
+
+We have added the Substrate module template as a dependency to the `substrate-node-template`, but if you want to remove it, you will need to:
+
+1. Remove references from the runtime `Cargo.toml` file.
+2. Remove references from the runtime `lib.rs` file.
 
 # How was it made?
 
 `substrate-node-template` was created by running [`substrate-node-new`](https://github.com/paritytech/substrate-up/blob/master/substrate-node-new).
+
+`substrate-module-template` was cloned from [`shawntabrizi/substrate-module-template`](https://github.com/shawntabrizi/substrate-module-template), and Substrate dependencies updated to match `substrate-node-template`.
 
 `substrate-ui` was created by running [`substrate-ui-new`](https://github.com/paritytech/substrate-up/blob/master/substrate-ui-new).
 

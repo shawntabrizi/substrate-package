@@ -1,0 +1,48 @@
+[package]
+name = "substrate-module-template"
+version = "0.1.0"
+authors = ["Shawn Tabrizi <shawntabrizi@gmail.com>"]
+edition = "2018"
+
+[features]
+default = ['std']
+std = [
+    'parity-codec/std',
+    'support/std',
+    'system/std',
+]
+
+[dependencies.parity-codec]
+default-features = false
+features = ['derive']
+version = '3.5'
+
+[dependencies.support]
+default_features = false
+git = 'https://github.com/paritytech/substrate.git'
+package = 'srml-support'
+rev = '047e887d1191aa0b85f46570a432c5665bfc1b02'
+
+[dependencies.system]
+default_features = false
+git = 'https://github.com/paritytech/substrate.git'
+package = 'srml-system'
+rev = '047e887d1191aa0b85f46570a432c5665bfc1b02'
+
+[dev-dependencies.primitives]
+default_features = false
+git = 'https://github.com/paritytech/substrate.git'
+package = 'substrate-primitives'
+rev = '047e887d1191aa0b85f46570a432c5665bfc1b02'
+
+[dev-dependencies.runtime-primitives]
+default_features = false
+git = 'https://github.com/paritytech/substrate.git'
+package = 'sr-primitives'
+rev = '047e887d1191aa0b85f46570a432c5665bfc1b02'
+
+[dev-dependencies.runtime-io]
+default_features = false
+git = 'https://github.com/paritytech/substrate.git'
+package = 'sr-io'
+rev = '047e887d1191aa0b85f46570a432c5665bfc1b02'
