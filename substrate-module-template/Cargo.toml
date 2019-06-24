@@ -21,28 +21,28 @@ version = '3.5'
 default_features = false
 git = 'https://github.com/paritytech/substrate.git'
 package = 'srml-support'
-rev = '047e887d1191aa0b85f46570a432c5665bfc1b02'
+branch = 'v1.0'
 
 [dependencies.system]
 default_features = false
 git = 'https://github.com/paritytech/substrate.git'
 package = 'srml-system'
-rev = '047e887d1191aa0b85f46570a432c5665bfc1b02'
+branch = 'v1.0'
 
 [dev-dependencies.primitives]
 default_features = false
 git = 'https://github.com/paritytech/substrate.git'
 package = 'substrate-primitives'
-rev = '047e887d1191aa0b85f46570a432c5665bfc1b02'
+branch = 'v1.0'
 
 [dev-dependencies.runtime-primitives]
 default_features = false
 git = 'https://github.com/paritytech/substrate.git'
 package = 'sr-primitives'
-rev = '047e887d1191aa0b85f46570a432c5665bfc1b02'
+branch = 'v1.0'
 
 [dev-dependencies.runtime-io]
 default_features = false
 git = 'https://github.com/paritytech/substrate.git'
 package = 'sr-io'
-rev = '047e887d1191aa0b85f46570a432c5665bfc1b02'
+branch = 'v1.0'
