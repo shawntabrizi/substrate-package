@@ -2,6 +2,8 @@
 
 A stable, known working version of the [Substrate Node Template](https://github.com/paritytech/substrate/tree/master/node-template), [Substrate Module Template](https://github.com/shawntabrizi/substrate-module-template), and [Substrate UI](https://github.com/paritytech/substrate-ui).
 
+> **Note:** that this branch depends on the `v1.0` branch of Substrate, not a fixed commit. That means it _may_ be possible that your node breaks if a breaking change makes its way into the `v1.0` branch, but this is unlikely as the branch is intended to be stable.
+
 # How to use it:
 
  * Run `git clone https://github.com/shawntabrizi/substrate-package.git`.
@@ -31,7 +33,7 @@ A stable, known working version of the [Substrate Node Template](https://github.
 
 * Compatible with the latest documentation available for Substrate Runtime Module development.
 * The fastest way to get started building on substrate
-* Using Substrate commit: [047e887d1191aa0b85f46570a432c5665bfc1b02](https://github.com/paritytech/substrate/commit/047e887d1191aa0b85f46570a432c5665bfc1b02) (`v1.0` branch)
+* Using Substrate branch: `v1.0`
 * Using Substrate UI commit: [db7bf60ee81cfd1551c8b9a4ad67f0b1d8d331bc](https://github.com/paritytech/substrate-ui/commit/db7bf60ee81cfd1551c8b9a4ad67f0b1d8d331bc) (`substrate-node-template` branch)
 
 # What is the Substrate Module Template?
