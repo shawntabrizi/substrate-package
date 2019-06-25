@@ -1,7 +1,7 @@
 use primitives::{ed25519, sr25519, Pair};
 use node_template_runtime::{
 	AccountId, GenesisConfig, ConsensusConfig, TimestampConfig, BalancesConfig,
-	SudoConfig, IndicesConfig,
+	SudoConfig, IndicesConfig, ContractConfig,
 };
 use substrate_service;
 
@@ -91,6 +91,22 @@ impl Alternative {
 }
 
 fn testnet_genesis(initial_authorities: Vec<AuthorityId>, endowed_accounts: Vec<AccountId>, root_key: AccountId) -> GenesisConfig {
+	let mut contract_config = ContractConfig {
+		transaction_base_fee: 1,
+		transaction_byte_fee: 0,
+		transfer_fee: 0,
+		creation_fee: 0,
+		contract_fee: 21,
+		call_base_fee: 135,
+		create_base_fee: 175,
+		gas_price: 1,
+		max_depth: 1024,
+		block_gas_limit: 10_000_000,
+		current_schedule: Default::default(),
+	};
+	// IMPORTANT: this should only be enabled on development chains!
+	contract_config.current_schedule.enable_println = true;
+	
 	GenesisConfig {
 		consensus: Some(ConsensusConfig {
 			code: include_bytes!("../runtime/wasm/target/wasm32-unknown-unknown/release/node_template_runtime_wasm.compact.wasm").to_vec(),
@@ -115,5 +131,6 @@ fn testnet_genesis(initial_authorities: Vec<AuthorityId>, endowed_accounts: Vec<
 		sudo: Some(SudoConfig {
 			key: root_key,
 		}),
+		contract: Some(contract_config),
 	}
 }
