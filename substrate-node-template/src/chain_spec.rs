@@ -131,6 +131,6 @@ fn testnet_genesis(initial_authorities: Vec<AuthorityId>, endowed_accounts: Vec<
 		sudo: Some(SudoConfig {
 			key: root_key,
 		}),
-		contract: Some(contract_config),
+		srml_contract: Some(contract_config),
 	}
 }

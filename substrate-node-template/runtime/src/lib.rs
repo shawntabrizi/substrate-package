@@ -197,16 +197,18 @@ impl substrate_module_template::Trait for Runtime {
 	type Event = Event;
 }
 
-impl contract::Trait for Runtime {
+impl srml_contract::Trait for Runtime {
 	type Currency = Balances;
 	type Call = Call;
 	type Event = Event;
 	type Gas = u64;
-	type DetermineContractAddress = contract::SimpleAddressDeterminator<Runtime>;
-	type ComputeDispatchFee = contract::DefaultDispatchFeeComputor<Runtime>;
-	type TrieIdGenerator = contract::TrieIdFromParentCounter<Runtime>;
+	type DetermineContractAddress = srml_contract::SimpleAddressDeterminator<Runtime>;
+	type ComputeDispatchFee = srml_contract::DefaultDispatchFeeComputor<Runtime>;
+	type TrieIdGenerator = srml_contract::TrieIdFromParentCounter<Runtime>;
 	type GasPayment = ();
 }
+
+impl contract::Trait for Runtime {}
 
 construct_runtime!(
 	pub enum Runtime with Log(InternalLog: DigestItem<Hash, AuthorityId, AuthoritySignature>) where
@@ -221,7 +223,8 @@ construct_runtime!(
 		Indices: indices,
 		Balances: balances,
 		Sudo: sudo,
-		Contract: contract,
+		Contract: srml_contract::{Module, Storage, Config<T>, Event<T>},
+		SudoContract: contract::{Module, Call},
 		// Used for the module template in `./template.rs`
 		TemplateModule: template::{Module, Call, Storage, Event<T>},
 		ExampleModule: substrate_module_template::{Module, Call, Storage, Event<T>},

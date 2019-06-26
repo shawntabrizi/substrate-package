@@ -22,6 +22,7 @@ std = [
     'offchain-primitives/std',
     'substrate-module-template/std',
     'contract/std',
+    'srml-contract/std',
 ]
 [dependencies.aura]
 default_features = false
@@ -33,10 +34,16 @@ branch = 'v1.0'
 default_features = false
 path = '../../substrate-module-template/'
 
-[dependencies.contract]
+[dependencies.srml-contract]
 default_features = false
 git = 'https://github.com/paritytech/substrate.git'
 package = 'srml-contract'
+branch = 'v1.0'
+
+[dependencies.contract]
+default_features = false
+git = 'https://github.com/shawntabrizi/sudo-contract.git'
+package = 'sudo-contract'
 branch = 'v1.0'
 
 [dependencies.balances]
