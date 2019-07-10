@@ -100,11 +100,12 @@ You may need to specify some developer dependency which is needed for your tests
 
 ```
 [dev-dependencies.runtime-io]
-default_features = false
 git = 'https://github.com/paritytech/substrate.git'
 package = 'sr-io'
 branch = 'v1.0'
 ```
+
+> **Note:** `dev-dependencies` will always use `std`, so you should not set `default-features = false`.
 
 ### Forgetting `cfg_attr` for `no_std`
 
