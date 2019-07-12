@@ -4,10 +4,21 @@ version = "0.1.0"
 authors = ["[your_name] <[your_email]>"]
 edition = "2018"
 
-[dependencies]
-ink_core = { git = "https://github.com/paritytech/ink", package = "ink_core" }
-ink_model = { git = "https://github.com/paritytech/ink", package = "ink_model" }
-ink_lang = { git = "https://github.com/paritytech/ink", package = "ink_lang" }
+[dependencies.ink_core]
+git = "https://github.com/paritytech/ink"
+package = "ink_core"
+rev = "efe69028cc5bd9ec86bfc15f52162b39c560c194"
+
+[dependencies.ink_model]
+git = "https://github.com/paritytech/ink"
+package = "ink_model"
+rev = "efe69028cc5bd9ec86bfc15f52162b39c560c194"
+
+[dependencies.ink_lang]
+git = "https://github.com/paritytech/ink"
+package = "ink_lang"
+rev = "efe69028cc5bd9ec86bfc15f52162b39c560c194"
+
 parity-codec = { version = "3.3", default-features = false, features = ["derive"] }
 
 [lib]
