@@ -29,6 +29,7 @@ std = [
     'safe-mix/std',
     'offchain-primitives/std',
     'substrate-session/std',
+    'module-template/std',
 ]
 [dependencies.babe]
 default-features = false
@@ -153,3 +154,8 @@ rev = '337a0b22aaa42e4210d59091d4d95ad75dbb02f3'
 [build-dependencies.wasm-builder-runner]
 package = 'substrate-wasm-builder-runner'
 version = '1.0.2'
+
+[dependencies.module-template]
+default_features = false
+path = "../../substrate-module-template/"
+package = 'substrate-module-template'

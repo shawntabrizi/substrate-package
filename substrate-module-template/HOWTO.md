@@ -9,20 +9,10 @@ For the time being, Substrate does not have any releases on Cargo, which means t
 This repository has all Substrate dependencies use:
 
 ```
-branch = 'v1.0'
-```
-
-This means that the runtime is using this module must also be tied to the `v1.0` branch, not simply the same commit (`rev`).
-
-If you are working with the Substrate node template or the [`substrate-package`](https://github.com/shawntabrizi/substrate-package/) which uses a specific git commit (`rev`), you can find/replace all instances of `branch = 'v1.0'` with:
-
-```
-rev = '<git-commit>'
+rev = '337a0b22aaa42e4210d59091d4d95ad75dbb02f3'
 ```
 
 This of course means that only runtimes with this setting on their side can use your module, at which point you may want to introduce different branches yourself for supporting different commits... 
-
-Our recommended pattern is to keep your module marked as `v1.0` and tell your runtime developer to update their dependencies. `v1.0` branch _should_ be stable.
 
 > **Note:** Be sure to purge your projects of any `Cargo.lock` files when making changes like this!
 
@@ -102,7 +92,7 @@ You may need to specify some developer dependency which is needed for your tests
 [dev-dependencies.runtime-io]
 git = 'https://github.com/paritytech/substrate.git'
 package = 'sr-io'
-branch = 'v1.0'
+rev = '337a0b22aaa42e4210d59091d4d95ad75dbb02f3'
 ```
 
 > **Note:** `dev-dependencies` will always use `std`, so you should not set `default-features = false`.

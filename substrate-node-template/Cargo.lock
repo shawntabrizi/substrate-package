@@ -2109,6 +2109,7 @@ dependencies = [
  "srml-timestamp 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=337a0b22aaa42e4210d59091d4d95ad75dbb02f3)",
  "substrate-client 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=337a0b22aaa42e4210d59091d4d95ad75dbb02f3)",
  "substrate-consensus-babe-primitives 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=337a0b22aaa42e4210d59091d4d95ad75dbb02f3)",
+ "substrate-module-template 0.1.0",
  "substrate-offchain-primitives 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=337a0b22aaa42e4210d59091d4d95ad75dbb02f3)",
  "substrate-primitives 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=337a0b22aaa42e4210d59091d4d95ad75dbb02f3)",
  "substrate-session 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=337a0b22aaa42e4210d59091d4d95ad75dbb02f3)",
@@ -3875,6 +3876,15 @@ dependencies = [
  "substrate-application-crypto 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=337a0b22aaa42e4210d59091d4d95ad75dbb02f3)",
  "substrate-primitives 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=337a0b22aaa42e4210d59091d4d95ad75dbb02f3)",
  "subtle 2.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "substrate-module-template"
+version = "0.1.0"
+dependencies = [
+ "parity-scale-codec 1.0.5 (registry+https://github.com/rust-lang/crates.io-index)",
+ "srml-support 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=337a0b22aaa42e4210d59091d4d95ad75dbb02f3)",
+ "srml-system 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=337a0b22aaa42e4210d59091d4d95ad75dbb02f3)",
 ]
 
 [[package]]
