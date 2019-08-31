@@ -4,3 +4,6 @@
 [submodule "substrate-module-template"]
 	path = substrate-module-template
 	url = https://github.com/substrate-developer-hub/substrate-module-template
+[submodule "substrate-ui-template"]
+	path = substrate-ui-template
+	url = https://github.com/substrate-developer-hub/substrate-ui-template
