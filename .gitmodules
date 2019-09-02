@@ -10,3 +10,7 @@
 	path = substrate-ui-template
 	url = https://github.com/substrate-developer-hub/substrate-ui-template
 	branch = substrate-package
+[submodule "polkadot-js-apps"]
+	path = polkadot-js-apps
+	url = https://github.com/polkadot-js/apps
+	branch = substrate-package
