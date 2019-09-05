@@ -6,7 +6,7 @@ A stable, known working version of the [Substrate Node Template](https://github.
 
 # How to use it:
 
- * Run `git clone https://github.com/shawntabrizi/substrate-package.git`.
+ * Run `git clone --recurse-submodules https://github.com/substrate-developer-hub/substrate-package`.
  * Run `cd substrate-package`.
  * Run `curl https://getsubstrate.io -sSf | bash -s -- --fast`
     * This installs external dependencies needed for substrate. [Take a look at the script](https://getsubstrate.io).
