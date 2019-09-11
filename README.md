@@ -17,6 +17,7 @@ A stable, known working version of the [Substrate Node Template](https://github.
     * This renames the project folders, and the binary file that gets created when you compile your runtime
 
 * Go into the `<project_name>` folder and run:
+    * `./scripts/init.sh`
     * `./scripts/build.sh`
     * `cargo build --release`
     * `./target/release/<project_name> --dev`
