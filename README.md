@@ -19,15 +19,23 @@ A stable, known working version of the [Substrate Node Template](https://github.
     * Windows users need to follow [instructions here](https://github.com/paritytech/substrate#61-hacking-on-substrate) instead
 
 * Go into the `substrate-node-template` folder and run:
-    * `./scripts/init.sh`
-    * `cargo build --release`
-    * `cargo run --release -- --dev`
-    * This should start your node, and you should see blocks being created
+
+    ```sh
+    ./scripts/init.sh
+    cargo build --release
+    ./target/release/node-template --dev
+    ```
+
+    The above process may take 30 minuites or so, depending on your hardware. This should start your node, and you should see blocks being created.
 
 * Go into the `substrate-front-end-template` folder and run:
-    * `yarn install`
-    * `yarn start`
-    * This should start a web server on `localhost:3000` where you can interact with your node
+
+    ```sh
+    yarn install
+    yarn start
+    ```
+
+    This should start a web server on `localhost:3000` where you can interact with your node.
 
 * Go into the `substrate-module-template` folder:
     * Read `HOWTO.md`
@@ -40,7 +48,7 @@ A stable, known working version of the [Substrate Node Template](https://github.
 
 The `substrate-module-template` is a template where you can start building your own runtime module as it's own independent crate.
 
-This is an alternative from writing your module in `substrate-node-template/runtime/src/template.rs`, where you would not be able to easily share your runtime module after your are done. We recommend development in the `substrate-module-template` if you want to allow others to include your runtime module into their Substrate node. 
+This is an alternative from writing your module in `substrate-node-template/runtime/src/template.rs`, where you would not be able to easily share your runtime module after your are done. We recommend development in the `substrate-module-template` if you want to allow others to include your runtime module into their Substrate node.
 
 Instructions for using the `substrate-module-template` are included with the project.
 
