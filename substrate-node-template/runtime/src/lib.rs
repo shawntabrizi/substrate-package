@@ -256,6 +256,11 @@ impl template::Trait for Runtime {
 	type Event = Event;
 }
 
+/// Used for the module template in `./template.rs`
+impl module_template::Trait for Runtime {
+	type Event = Event;
+}
+
 construct_runtime!(
 	pub enum Runtime where
 		Block = Block,
@@ -270,7 +275,8 @@ construct_runtime!(
 		Balances: balances::{default, Error},
 		Sudo: sudo,
 		// Used for the module template in `./template.rs`
-		TemplateModule: template::{Module, Call, Storage, Event<T>},
+		EmbeddedTemplate: template::{Module, Call, Storage, Event<T>},
+		ModuleTemplate: module_template::{Module, Call, Storage, Event<T>},
 	}
 );
 

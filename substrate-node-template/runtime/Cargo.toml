@@ -28,6 +28,7 @@ std = [
     'safe-mix/std',
     'offchain-primitives/std',
     'substrate-session/std',
+    'module-template/std',
 ]
 [build-dependencies.wasm-builder-runner]
 package = 'substrate-wasm-builder-runner'
@@ -152,3 +153,8 @@ default_features = false
 git = 'https://github.com/paritytech/substrate.git'
 package = 'sr-version'
 rev = '7d7e74fb77b6bee2ce9d6ebafcae09caff2d0e50'
+
+[dependencies.module-template]
+default_features = false
+package = 'substrate-module-template'
+path = '../../substrate-module-template/'

@@ -2,7 +2,14 @@
 
 A stable, known working version of the [Substrate Node Template](https://github.com/substrate-developer-hub/substrate-node-template), [Substrate Module Template](https://github.com/substrate-developer-hub/substrate-module-template), and [Substrate Front End Template](https://github.com/substrate-developer-hub/substrate-front-end-template).
 
-# How to use it:
+## What is this?
+
+* The fastest way to get started building on Substrate.
+* Compatible with the latest documentation available for Substrate runtime module development.
+* Using [Substrate](https://github.com/paritytech/substrate) commit: `7d7e74fb77b6bee2ce9d6ebafcae09caff2d0e50`
+* Using [Polkadot-JS API](https://github.com/polkadot-js/api/) version: `^0.91.0-beta.22`
+
+## How to use it:
 
  * Run `git clone https://github.com/substrate-developer-hub/substrate-package.git`.
  * Run `cd substrate-package`.
@@ -29,16 +36,13 @@ A stable, known working version of the [Substrate Node Template](https://github.
 
 * Interact with your node and hack away!
 
-# What is this?
+## What is the Substrate Module Template?
 
-* Compatible with the latest documentation available for Substrate Runtime Module development.
-* The fastest way to get started building on substrate
-* Using Substrate commit: `7d7e74fb77b6bee2ce9d6ebafcae09caff2d0e50`
-* Using [Polkadot-JS API](https://github.com/polkadot-js/api/) Version: `^0.91.0-beta.22`
+The `substrate-module-template` is a template where you can start building your own runtime module as it's own independent crate.
 
-# What is the Substrate Module Template?
+This is an alternative from writing your module in `substrate-node-template/runtime/src/template.rs`, where you would not be able to easily share your runtime module after your are done. We recommend development in the `substrate-module-template` if you want to allow others to include your runtime module into their Substrate node. 
 
-The `substrate-module-template` is a template where you can start building your own runtime module as it's own independent crate. This is great if you want to allow others to include your runtime module into their Substrate node. Instructions for using the `substrate-module-template` are included with the project.
+Instructions for using the `substrate-module-template` are included with the project.
 
 We have added the Substrate module template as a dependency to the `substrate-node-template`, but if you want to remove it, you will need to:
 
