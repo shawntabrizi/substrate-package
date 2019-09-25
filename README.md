@@ -21,7 +21,7 @@ A stable, known working version of the [Substrate Node Template](https://github.
 * Go into the `substrate-node-template` folder and run:
     * `./scripts/init.sh`
     * `cargo build --release`
-    * `./target/release/node-template --dev`
+    * `cargo run --release -- --dev`
     * This should start your node, and you should see blocks being created
 
 * Go into the `substrate-front-end-template` folder and run:
