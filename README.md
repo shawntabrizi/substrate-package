@@ -23,16 +23,10 @@ A stable, known working version of the [Substrate Node Template](https://github.
     ```sh
     ./scripts/init.sh
     cargo build --release
-    cargo run --release -- --dev
-    ```
-
-    The above process may take 30 minuites or so, depending on your hardware. This should start your node, and you should see blocks being created
-
-    If you have not modified the source code since last compilation, or just want to directly run the node,
-
-    ```sh
     ./target/release/node-template --dev
     ```
+
+    The above process may take 30 minuites or so, depending on your hardware. This should start your node, and you should see blocks being created.
 
 * Go into the `substrate-front-end-template` folder and run:
 
@@ -41,7 +35,7 @@ A stable, known working version of the [Substrate Node Template](https://github.
     yarn start
     ```
 
-    This should start a web server on `localhost:3000` where you can interact with your node
+    This should start a web server on `localhost:3000` where you can interact with your node.
 
 * Go into the `substrate-module-template` folder:
     * Read `HOWTO.md`
