@@ -1,6 +1,6 @@
 # substrate-module-template
 
-This is a template for a Substrate runtime module which lives as its own crate so it can be imported into multiple other runtimes. It is based on the ["template" module](https://github.com/paritytech/substrate/blob/v1.0/node-template/runtime/src/template.rs) which is included with the [Substrate node template](https://github.com/paritytech/substrate/tree/v1.0/node-template).
+This is a template for a Substrate runtime module which lives as its own crate so it can be imported into multiple other runtimes. It is based on the ["template" module](https://github.com/paritytech/substrate/blob/master/node-template/runtime/src/template.rs) which is included with the [Substrate node template](https://github.com/paritytech/substrate/tree/master/node-template).
 
 Check out the [HOWTO](HOWTO.md) to learn how to use this for your own runtime module.
 
@@ -59,6 +59,10 @@ and include it in your `construct_runtime!` macro:
 ```rust
 ExampleModule: substrate_module_template::{Module, Call, Storage, Event<T>},
 ```
+
+### Genesis Configuration
+
+This template module does not have any genesis configuration.
 
 ## Reference Docs
 
