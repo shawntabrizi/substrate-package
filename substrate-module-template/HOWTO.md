@@ -21,7 +21,7 @@ For the time being, Substrate does not have any releases on Cargo, which means t
 This repository has all Substrate dependencies use:
 
 ```
-rev = '7d7e74fb77b6bee2ce9d6ebafcae09caff2d0e50'
+rev = '3dedd246c62255ba6f9b777ecba318dfc2078d85'
 ```
 
 > **Note:** Be sure to purge your projects of any `Cargo.lock` files when making changes like this!
@@ -102,7 +102,7 @@ You may need to specify some developer dependency which is needed for your tests
 [dev-dependencies.runtime-io]
 git = 'https://github.com/paritytech/substrate.git'
 package = 'sr-io'
-rev = '7d7e74fb77b6bee2ce9d6ebafcae09caff2d0e50'
+rev = '3dedd246c62255ba6f9b777ecba318dfc2078d85'
 ```
 
 > **Note:** `dev-dependencies` will always use `std`, so you should not set `default-features = false`.

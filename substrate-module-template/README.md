@@ -31,7 +31,7 @@ To add this module to your runtime, simply include the following to your runtime
 ```rust
 [dependencies.substrate-module-template]
 default_features = false
-git = 'https://github.com/shawntabrizi/substrate-module-template.git'
+git = 'https://github.com/substrate-developer-hub/substrate-module-template.git'
 ```
 
 and update your runtime's `std` feature to include this module:
