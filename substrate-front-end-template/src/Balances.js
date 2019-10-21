@@ -34,7 +34,10 @@ function Main (props) {
           <Table.Row key={account.address}>
             <Table.Cell textAlign='right'>{account.meta.name}</Table.Cell>
             <Table.Cell>{account.address}</Table.Cell>
-            <Table.Cell>{balances && balances[account.address]}</Table.Cell>
+            <Table.Cell>{
+              balances && balances[account.address] &&
+              balances[account.address]
+            }</Table.Cell>
           </Table.Row>
         )}
         </Table.Body>
