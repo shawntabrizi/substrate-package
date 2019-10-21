@@ -6,8 +6,8 @@ A stable, known working version of the [Substrate Node Template](https://github.
 
 * The fastest way to get started building on Substrate.
 * Compatible with the latest documentation available for Substrate runtime module development.
-* Using [Substrate](https://github.com/paritytech/substrate) commit: `7d7e74fb77b6bee2ce9d6ebafcae09caff2d0e50`
-* Using [Polkadot-JS API](https://github.com/polkadot-js/api/) version: `^0.91.0-beta.22`
+* Using [Substrate](https://github.com/paritytech/substrate) commit: `d1cd01c74e8d5550396cb654f9a3f1b641efdf4c`
+* Using [Polkadot-JS API](https://github.com/polkadot-js/api/) version: `^0.95.0-beta.21`
 
 ## How to use it:
 
